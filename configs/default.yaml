@@ -1,0 +1,11 @@
+# Default inspection configuration. Every key is optional; see sdd/config.py for documentation.
+pixel_size_mm: 0.05        # calibrate with `sdd calibrate` or a gauge block (mm per pixel)
+low_threshold: 4.0
+high_threshold: 6.5
+min_area_px: 10
+max_size_mm:               # reject a part if a defect of this class is longer than the limit
+  scratch: 3.0
+  crack: 0.0               # any crack => NG
+  pit: 0.5
+  stain: 2.0
+max_defect_count: 5
